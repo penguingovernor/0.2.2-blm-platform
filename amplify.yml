@@ -4,8 +4,7 @@ frontend:
     # IMPORTANT - Please verify your build commands
     build:
       commands:
-        - npm install
-        - npm run build
+        - cd frontend && npm install && npm run build
 
 
   artifacts:
