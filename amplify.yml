@@ -1,18 +1,13 @@
-version: 0.1
+version: 1.0
+env:
+  variables:
+      key: value
 frontend:
   phases:
-    # IMPORTANT - Please verify your build commands
+    preBuild:
+      commands:
+        - cd frontend
+        - npm install
     build:
       commands:
-        - cd frontend && npm install && npm run build
-
-
-  artifacts:
-    # IMPORTANT - Please verify your build output directory
-    baseDirectory: build
-    files:
-      - '**/*'
-
-  cache:
-    paths:
-      - node_modules/**/*
+        - npm run build
