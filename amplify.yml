@@ -11,6 +11,7 @@ frontend:
     baseDirectory: frontend/build
     files:
       - '**/*'
+      - 'scrubber'
   cache:
     paths:
       - frontend/node_modules/**/*
